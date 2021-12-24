@@ -1,9 +1,5 @@
 $(document).ready(function () {
     load();
-    $(".notif").html('Chào mừng bạn tới trang tin tức GNew.<br> Click vào kính lúp để tìm kiếm tin tức, click kính lần nữa để tắt công cụ tìm kiếm.<br> Cảm ơn.')
-    $("#close").click(function () {
-        $(".notif-contain").css('display','none');
-    })
     fetch('https://gnews.io/api/v4/top-headlines?' + "&" + "lang=" + "en" + "&" + '&token=6ea0f0008da321e78595316786e99675')
     .then(function (response) {
         return response.json();
