@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    load();
     var data = "";
     $.get(
       "https://gnews.io/api/v4/top-headlines?&lang=en&token=6ea0f0008da321e78595316786e99675",
@@ -62,23 +61,5 @@ $(document).ready(function () {
       }
       $("#input").slideUp("slow");
     });
-    function load() {
-      var x = document.onreadystatechange;
-      if (x == "interactive") {
-        $(".main-content").style.visibility = "hidden";
-        document.getElementById("content-search").style.visibility = "hidden";
-        $(".notif-contain").style.visibility = "hidden";
-      } else if (x == "complete") {
-        setTimeout(function () {
-          $("#interactive");
-          $(".loader").style.visibility = "hidden";
-          $(".xoay").style.visibility = "hidden";
-          $(".icon").style.visibility = "hidden";
-          $(".main-content").style.visibility = "visible";
-          $(".notif-contain").style.display = "block";
-          $("#content-search").style.visibility = "visible";
-        }, 1000);
-      }
-    }
   });
   
