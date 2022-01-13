@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    var data = "";
     $.get(
       "https://gnews.io/api/v4/top-headlines?&lang=en&token=6ea0f0008da321e78595316786e99675",
       function (data, status) {
